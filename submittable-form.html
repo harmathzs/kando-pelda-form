@@ -46,7 +46,8 @@
             <div class="form-row">
                   <div class="form-group col-md-4">
                         <label for="cmpTel">Tel</label>
-                        <input type="tel" id="cmpTel" name="cmpTel" class="form-control" placeholder="Phone number" />
+                        <input type="tel" id="cmpTel" name="cmpTel" class="form-control" 
+                        placeholder="+36(70)123-4567" pattern="^\+36\([0-9]0\)[0-9]{3}-[0-9]{4}$" />
                   </div>
                   <div class="form-group col-md-4">
                         <label for="cmpUrl">URL</label>
@@ -89,11 +90,13 @@
                   </div>
                   <div class="form-group col-md-4">
                         <label for="cmpNumber">Number</label>
-                        <input type="number" id="cmpNumber" name="cmpNumber" class="form-control" />
+                        <input type="number" id="cmpNumber" name="cmpNumber" class="form-control"
+                        min="1" max="10" step="1" value="1" />
                   </div>
                   <div class="form-group col-md-4">
                         <label for="cmpRange">Range</label>
-                        <input type="range" id="cmpRange" name="cmpRange" class="form-control-range" />
+                        <input type="range" id="cmpRange" name="cmpRange" class="form-control-range"
+                        min="0" max="100" />
                   </div>
             </div>
 
@@ -108,7 +111,8 @@
                   </div>
                   <div class="form-group col-md-4">
                         <label for="cmpDate">Date</label>
-                        <input type="date" id="cmpDate" name="cmpDate" class="form-control" />
+                        <input type="date" id="cmpDate" name="cmpDate" class="form-control"
+                        min="1979-12-31" max="2026-12-31" />
                   </div>
             </div>
 
