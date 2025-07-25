@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<!-- submittable-form.html -->
+<html lang="en">
+<head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+      <title>Submittable Form</title>
+      <style>
+            body {
+                  padding: 2rem;
+                  background-color: #f8f9fa;
+            }
+            h1 {
+                  margin-bottom: 2rem;
+                  font-weight: 700;
+            }
+            form {
+                  background: #fff;
+                  padding: 2rem;
+                  border-radius: 0.5rem;
+                  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            }
+            .form-group label {
+                  font-weight: 600;
+            }
+            .btn-group {
+                  display: flex;
+                  gap: 1rem;
+            }
+      </style>
+</head>
+<body>
+      <h1>Normal Submit Form</h1>
+      <form class="form-horizontal" method="get" action="submitted-handler.html">
+            <div class="form-row">
+                  <div class="form-group col-md-6">
+                        <label for="cmpName">Name</label>
+                        <input type="text" id="cmpName" name="cmpName" class="form-control" placeholder="Enter name" />
+                  </div>
+                  <div class="form-group col-md-6">
+                        <label for="cmpSearch">Search</label>
+                        <input type="search" id="cmpSearch" name="cmpSearch" class="form-control" placeholder="Search..." />
+                  </div>
+            </div>
+
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <label for="cmpTel">Tel</label>
+                        <input type="tel" id="cmpTel" name="cmpTel" class="form-control" 
+                        placeholder="+36(70)123-4567" pattern="^\+36\([0-9]0\)[0-9]{3}-[0-9]{4}$" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpUrl">URL</label>
+                        <input type="url" id="cmpUrl" name="cmpUrl" class="form-control" placeholder="https://" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpEmail">Email</label>
+                        <input type="email" id="cmpEmail" name="cmpEmail" class="form-control" placeholder="Email address" />
+                  </div>
+            </div>
+
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="cmpCheckbox" name="cmpCheckbox" checked />
+                              <label class="form-check-label" for="cmpCheckbox">Checkbox</label>
+                        </div>
+                  </div>
+                  <div class="form-group col-md-8 d-flex align-items-center">
+                        <div class="form-check mr-3">
+                              <input class="form-check-input" type="radio" id="cmpRadioBeer" name="cmpRadio" value="beer" checked />
+                              <label class="form-check-label" for="cmpRadioBeer">Beer</label>
+                        </div>
+                        <div class="form-check">
+                              <input class="form-check-input" type="radio" id="cmpRadioWine" name="cmpRadio" value="wine" />
+                              <label class="form-check-label" for="cmpRadioWine">Wine</label>
+                        </div>
+                  </div>
+            </div>
+
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <label for="cmpColor">Color</label>
+                        <input type="color" id="cmpColor" name="cmpColor" class="form-control p-1" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpNumber">Number</label>
+                        <input type="number" id="cmpNumber" name="cmpNumber" class="form-control"
+                        min="1" max="10" step="1" value="1" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpRange">Range</label>
+                        <input type="range" id="cmpRange" name="cmpRange" class="form-control-range"
+                        min="0" max="100" />
+                  </div>
+            </div>
+
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <label for="cmpMonth">Month</label>
+                        <input type="month" id="cmpMonth" name="cmpMonth" class="form-control" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpWeek">Week</label>
+                        <input type="week" id="cmpWeek" name="cmpWeek" class="form-control" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpDate">Date</label>
+                        <input type="date" id="cmpDate" name="cmpDate" class="form-control"
+                        min="1979-12-31" max="2026-12-31" />
+                  </div>
+            </div>
+
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <label for="cmpDateTime">Datetime</label>
+                        <input type="datetime-local" id="cmpDateTime" name="cmpDateTime" class="form-control" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpTime">Time</label>
+                        <input type="time" id="cmpTime" name="cmpTime" class="form-control" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpSelect">Select</label>
+                        <select id="cmpSelect" name="cmpSelect" class="form-control">
+                              <option value="apple">Apple</option>
+                              <option value="pear">Pear</option>
+                              <option value="orange">Orange</option>
+                              <option value="plum">Plum</option>
+                        </select>
+                  </div>
+            </div>
+
+            <div class="form-group">
+                  <label for="cmpTextarea">Textarea</label>
+                  <textarea id="cmpTextarea" name="cmpTextarea" rows="5" class="form-control" placeholder="Textarea..."></textarea>
+            </div>
+
+            <input type="hidden" id="cmpHidden" name="cmpHidden" value="Not quite hidden value." />
+
+            <div class="form-group btn-group mt-4">
+                  <input type="submit" id="cmpSubmit" name="cmpSubmit" class="btn btn-primary" value="Submit" />
+                  <input type="reset" id="cmpReset" name="cmpReset" class="btn btn-secondary" value="Reset" />
+            </div>
+      </form>
+
+      <h1 class="mt-5">File upload form</h1>
+      <form class="form-horizontal" id="file_form" method="post" enctype="multipart/form-data">
+        <div class="form-row">
+            <div class="form-group">
+                  <label for="cmpFileUpload">File upload</label>
+                  <input type="file" id="cmpFileUpload" name="cmpFileUpload" class="form-control" value="Upload file" />
+            </div>  
+        </div>
+        <div class="form-row">
+            <div class="form-group btn-group">
+                <input type="submit" id="cmpSubmitFileForm" name="cmpSubmitFileForm" class="btn btn-primary" value="Submit" />
+                <input type="reset" id="cmpResetFileForm" name="cmpSubmitFileForm" class="btn btn-secondary" value="Reset" />
+            </div>  
+        </div>
+      </form>
+
+      <form class="form-horizontal" id="password_form" method="post" enctype="application/x-www-form-urlencoded">
+            <div class="form-row">
+                  <div class="form-group">
+                        <label for="cmpPassword">Password</label>
+                        <input type="password" id="cmpPassword" name="cmpPassword" class="form-control" placeholder="Password" />
+                  </div>
+            </div>
+            <div class="form-row">
+                  <div class="form-group btn-group">
+                        <input type="submit" id="cmpSubmitPasswordForm" name="cmpSubmitPasswordForm" class="btn btn-primary" value="Submit" />
+                        <input type="reset" id="cmpResetPasswordForm" name="cmpResetPasswordForm" class="btn btn-secondary" value="Reset" />
+                  </div>  
+            </div>
+      </form>
+      <script>
+            (function(){
+                  document.getElementById('file_form').addEventListener('submit', e => {
+                        e.preventDefault();
+                        const fileInput = document.getElementById('cmpFileUpload');
+                        const files = fileInput.files;
+
+                        if (files.length === 0) {
+                              console.log('No file selected');
+                              return;
+                        }
+
+                        const file = files[0]; // First selected file
+                        console.log('File name:', file.name);           // e.g. "almafa.txt"
+                        console.log('File size:', file.size, 'bytes');  // file size in bytes
+                        console.log('File type:', file.type);           // MIME type, e.g. "text/plain"
+                        console.log('Last modified:', new Date(file.lastModified));
+
+                        // Optionally read file content
+                        const reader = new FileReader();
+                        reader.onload = function(event) {
+                              console.log('File content:', event.target.result); // file content as text or data URL
+                        };
+                        reader.readAsText(file);  // or readAsDataURL, etc., depending on your needs
+                  });
+            })();
+
+            (function(){
+                  document.getElementById('password_form').addEventListener('submit', e => {
+                        e.preventDefault();
+                        const password = document.getElementById('cmpPassword').value;
+                        debugger;
+                        // TODO - check password...
+                  });
+            })();
+      </script>
+</body>
+</html>
