@@ -161,13 +161,29 @@
         </div>
       </form>
 
-      <form class="form-horizontal" method="post" enctype="application/x-www-form-urlencoded">
+      <form class="form-horizontal" id="password_form" method="post" enctype="application/x-www-form-urlencoded">
             <div class="form-row">
                   <div class="form-group">
                         <label for="cmpPassword">Password</label>
                         <input type="password" id="cmpPassword" name="cmpPassword" class="form-control" placeholder="Password" />
                   </div>
             </div>
+            <div class="form-row">
+                  <div class="form-group btn-group">
+                        <input type="submit" id="cmpSubmitPasswordForm" name="cmpSubmitPasswordForm" class="btn btn-primary" value="Submit" />
+                        <input type="reset" id="cmpResetPasswordForm" name="cmpResetPasswordForm" class="btn btn-secondary" value="Reset" />
+                  </div>  
+            </div>
       </form>
+      <script>
+            (function(){
+                  document.getElementById('password_form').addEventListener('submit', e => {
+                        e.preventDefault();
+                        const password = document.getElementById('cmpPassword').value;
+                        debugger;
+                        // TODO - check password...
+                  });
+            })();
+      </script>
 </body>
 </html>
