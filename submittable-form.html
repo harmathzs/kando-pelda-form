@@ -146,7 +146,7 @@
       </form>
 
       <h1 class="mt-5">File upload form</h1>
-      <form class="form-horizontal" method="post" action="submitted-handler.html" enctype="multipart/form-data">
+      <form class="form-horizontal" id="file_form" method="post" enctype="multipart/form-data">
         <div class="form-row">
             <div class="form-group">
                   <label for="cmpFileUpload">File upload</label>
@@ -176,6 +176,32 @@
             </div>
       </form>
       <script>
+            (function(){
+                  document.getElementById('file_form').addEventListener('submit', e => {
+                        e.preventDefault();
+                        const fileInput = document.getElementById('cmpFileUpload');
+                        const files = fileInput.files;
+
+                        if (files.length === 0) {
+                              console.log('No file selected');
+                              return;
+                        }
+
+                        const file = files[0]; // First selected file
+                        console.log('File name:', file.name);           // e.g. "almafa.txt"
+                        console.log('File size:', file.size, 'bytes');  // file size in bytes
+                        console.log('File type:', file.type);           // MIME type, e.g. "text/plain"
+                        console.log('Last modified:', new Date(file.lastModified));
+
+                        // Optionally read file content
+                        const reader = new FileReader();
+                        reader.onload = function(event) {
+                              console.log('File content:', event.target.result); // file content as text or data URL
+                        };
+                        reader.readAsText(file);  // or readAsDataURL, etc., depending on your needs
+                  });
+            })();
+
             (function(){
                   document.getElementById('password_form').addEventListener('submit', e => {
                         e.preventDefault();
