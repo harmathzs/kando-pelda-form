@@ -6,6 +6,17 @@
     <title>Submitted form handler</title>
 </head>
 <body>
-    
+    <div id="form_data_div"></div>
+    <script>
+        // TODO - receive form data
+        const data = {test: 'test'};
+
+        const formDataDiv = document.getElementById('form_data_div');
+        let content = '';
+        for (const key in data) {
+            content += `<p><strong>${key}</strong>: ${data[key]}</p>`;
+        }
+        formDataDiv.innerHTML = content;
+    </script>
 </body>
 </html>
