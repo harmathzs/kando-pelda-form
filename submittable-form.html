@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=1024, initial-scale=1.0">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css" />    
+    <title>Submittable Form</title>
+</head>
+<body>
+    <h1>Normal submit form</h1>
+    <form class="form-horizontal" method="post" action="submitted-handler.html">
+        <div class="form-group">
+            <label for="cmpName" class="control-label">Name</label>
+            <input type="text" id="cmpName" name="cmpName" class="form-control" placeholder="Name...">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpSearch" class="control-label">Search</label>
+            <input type="search" id="cmpSearch" name="cmpSearch" class="form-control" placeholder="Search...">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpTel" class="control-label">Tel</label>
+            <input type="tel" id="cmpTel" name="cmpTel" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpUrl" class="control-label">URL</label>
+            <input type="url" id="cmpUrl" name="cmpUrl" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpEmail" class="control-label">Email</label>
+            <input type="email" id="cmpEmail" name="cmpEmail" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpPassword" class="control-label">Password</label>
+            <input type="password" id="cmpPassword" name="cmpPassword" class="form-control">
+        </div>
+
+        <div class="checkbox">
+            <label><input type="checkbox" id="cmpCheckbox" name="cmpCheckbox">Option 1</label>
+        </div>
+
+        <div class="radio">
+            <label><input type="radio" id="cmpRadioBeer" name="cmpRadio" value="beer" checked="checked">Beer</label>
+        </div>
+        <div class="radio">
+            <label><input type="radio" id="cmpRadioWine" name="cmpRadio" value="wine">Wine</label>
+        </div>
+
+        <div class="form-group">
+            <label for="cmpColor" class="control-label">Color</label>
+            <input type="color" id="cmpColor" name="cmpColor" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpNumber" class="control-label">Number</label>
+            <input type="number" id="cmpNumber" name="cmpNumber" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpRange" class="control-label">Range</label>
+            <input type="range" id="cmpRange" name="cmpRange" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpMonth" class="control-label">Month</label>
+            <input type="month" id="cmpMonth" name="cmpMonth" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpWeek" class="control-label">Week</label>
+            <input type="week" id="cmpWeek" name="cmpWeek" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpDate" class="control-label">Date</label>
+            <input type="date" id="cmpDate" name="cmpDate" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpDateTime" class="control-label">Datetime</label>
+            <input type="datetime-local" id="cmpDateTime" name="cmpDateTime" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpTime" class="control-label">Time</label>
+            <input type="time" id="cmpTime" name="cmpTime" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="cmpTextarea" class="control-label">Textarea</label>
+            <textarea id="cmpTextarea" name="cmpTextarea" rows="5" class="form-control" placeholder="Textarea..."></textarea>
+        </div>
+        
+        <div class="form-group">
+            <label for="cmpSelect" class="control-label">Select</label>
+            <select id="cmpSelect" name="cmpSelect" class="form-control">
+                <option value="apple">Apple</option>
+                <option value="pear">Pear</option>
+                <option value="orange">Orange</option>
+                <option value="plum">Plum</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <input type="hidden" id="cmpHidden" name="cmpHidden" class="form-control" value="Not quite hidden value.">
+        </div>
+
+        <div class="form-group">
+            <input type="submit" id="cmpSubmit" name="cmpSubmit" class="form-control btn btn-default" value="Submit">
+            <input type="reset" id="cmpReset" name="cmpReset" class="form-control btn btn-default" value="Reset">
+        </div>
+    </form>
+
+    <h1>File upload form</h1>
+</body>
+</html>
