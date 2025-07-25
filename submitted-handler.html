@@ -8,8 +8,19 @@
 <body>
     <div id="form_data_div"></div>
     <script>
-        // TODO - receive form data
-        const data = {test: 'test'};
+        // Get the full query string from the current URL (includes the ?)
+        const queryString = window.location.search;
+        console.log('queryString', queryString);
+
+        // Create a URLSearchParams object to work with the parameters
+        let urlParams = {};
+        if (queryString) urlParams = new URLSearchParams(queryString);
+        console.log('urlParams', urlParams);
+
+        const data = Object.fromEntries(urlParams.entries());
+        console.log('data', data);
+
+        //const data = {test: 'test'};
 
         const formDataDiv = document.getElementById('form_data_div');
         let content = '';
