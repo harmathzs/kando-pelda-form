@@ -1,121 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=1024, initial-scale=1.0">
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css" />    
-    <title>Submittable Form</title>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1" />
+      <link rel="stylesheet" href="bootstrap-4.0.0-dist/css/bootstrap.min.css" />
+      <title>Submittable Form</title>
+      <style>
+            body {
+                  padding: 2rem;
+                  background-color: #f8f9fa;
+            }
+            h1 {
+                  margin-bottom: 2rem;
+                  font-weight: 700;
+            }
+            form {
+                  background: #fff;
+                  padding: 2rem;
+                  border-radius: 0.5rem;
+                  box-shadow: 0 0 15px rgba(0,0,0,0.1);
+            }
+            .form-group label {
+                  font-weight: 600;
+            }
+            .btn-group {
+                  display: flex;
+                  gap: 1rem;
+            }
+      </style>
 </head>
 <body>
-    <h1>Normal submit form</h1>
-    <form class="form-horizontal" method="post" action="submitted-handler.html">
-        <div class="form-group">
-            <label for="cmpName" class="control-label">Name</label>
-            <input type="text" id="cmpName" name="cmpName" class="form-control" placeholder="Name...">
-        </div>
+      <h1>Normal Submit Form</h1>
+      <form class="form-horizontal" method="post" action="submitted-handler.html">
+            <div class="form-row">
+                  <div class="form-group col-md-6">
+                        <label for="cmpName">Name</label>
+                        <input type="text" id="cmpName" name="cmpName" class="form-control" placeholder="Enter name" />
+                  </div>
+                  <div class="form-group col-md-6">
+                        <label for="cmpSearch">Search</label>
+                        <input type="search" id="cmpSearch" name="cmpSearch" class="form-control" placeholder="Search..." />
+                  </div>
+            </div>
 
-        <div class="form-group">
-            <label for="cmpSearch" class="control-label">Search</label>
-            <input type="search" id="cmpSearch" name="cmpSearch" class="form-control" placeholder="Search...">
-        </div>
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <label for="cmpTel">Tel</label>
+                        <input type="tel" id="cmpTel" name="cmpTel" class="form-control" placeholder="Phone number" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpUrl">URL</label>
+                        <input type="url" id="cmpUrl" name="cmpUrl" class="form-control" placeholder="https://" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpEmail">Email</label>
+                        <input type="email" id="cmpEmail" name="cmpEmail" class="form-control" placeholder="Email address" />
+                  </div>
+            </div>
 
-        <div class="form-group">
-            <label for="cmpTel" class="control-label">Tel</label>
-            <input type="tel" id="cmpTel" name="cmpTel" class="form-control">
-        </div>
+            <div class="form-group">
+                  <label for="cmpPassword">Password</label>
+                  <input type="password" id="cmpPassword" name="cmpPassword" class="form-control" placeholder="Password" />
+            </div>
 
-        <div class="form-group">
-            <label for="cmpUrl" class="control-label">URL</label>
-            <input type="url" id="cmpUrl" name="cmpUrl" class="form-control">
-        </div>
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <div class="form-check">
+                              <input class="form-check-input" type="checkbox" id="cmpCheckbox" name="cmpCheckbox" checked />
+                              <label class="form-check-label" for="cmpCheckbox">Checkbox</label>
+                        </div>
+                  </div>
+                  <div class="form-group col-md-8 d-flex align-items-center">
+                        <div class="form-check mr-3">
+                              <input class="form-check-input" type="radio" id="cmpRadioBeer" name="cmpRadio" value="beer" checked />
+                              <label class="form-check-label" for="cmpRadioBeer">Beer</label>
+                        </div>
+                        <div class="form-check">
+                              <input class="form-check-input" type="radio" id="cmpRadioWine" name="cmpRadio" value="wine" />
+                              <label class="form-check-label" for="cmpRadioWine">Wine</label>
+                        </div>
+                  </div>
+            </div>
 
-        <div class="form-group">
-            <label for="cmpEmail" class="control-label">Email</label>
-            <input type="email" id="cmpEmail" name="cmpEmail" class="form-control">
-        </div>
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <label for="cmpColor">Color</label>
+                        <input type="color" id="cmpColor" name="cmpColor" class="form-control p-1" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpNumber">Number</label>
+                        <input type="number" id="cmpNumber" name="cmpNumber" class="form-control" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpRange">Range</label>
+                        <input type="range" id="cmpRange" name="cmpRange" class="form-control-range" />
+                  </div>
+            </div>
 
-        <div class="form-group">
-            <label for="cmpPassword" class="control-label">Password</label>
-            <input type="password" id="cmpPassword" name="cmpPassword" class="form-control">
-        </div>
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <label for="cmpMonth">Month</label>
+                        <input type="month" id="cmpMonth" name="cmpMonth" class="form-control" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpWeek">Week</label>
+                        <input type="week" id="cmpWeek" name="cmpWeek" class="form-control" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpDate">Date</label>
+                        <input type="date" id="cmpDate" name="cmpDate" class="form-control" />
+                  </div>
+            </div>
 
-        <div class="checkbox">
-            <label><input type="checkbox" id="cmpCheckbox" name="cmpCheckbox">Option 1</label>
-        </div>
+            <div class="form-row">
+                  <div class="form-group col-md-4">
+                        <label for="cmpDateTime">Datetime</label>
+                        <input type="datetime-local" id="cmpDateTime" name="cmpDateTime" class="form-control" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpTime">Time</label>
+                        <input type="time" id="cmpTime" name="cmpTime" class="form-control" />
+                  </div>
+                  <div class="form-group col-md-4">
+                        <label for="cmpSelect">Select</label>
+                        <select id="cmpSelect" name="cmpSelect" class="form-control">
+                              <option value="apple">Apple</option>
+                              <option value="pear">Pear</option>
+                              <option value="orange">Orange</option>
+                              <option value="plum">Plum</option>
+                        </select>
+                  </div>
+            </div>
 
-        <div class="radio">
-            <label><input type="radio" id="cmpRadioBeer" name="cmpRadio" value="beer" checked="checked">Beer</label>
-        </div>
-        <div class="radio">
-            <label><input type="radio" id="cmpRadioWine" name="cmpRadio" value="wine">Wine</label>
-        </div>
+            <div class="form-group">
+                  <label for="cmpTextarea">Textarea</label>
+                  <textarea id="cmpTextarea" name="cmpTextarea" rows="5" class="form-control" placeholder="Textarea..."></textarea>
+            </div>
 
-        <div class="form-group">
-            <label for="cmpColor" class="control-label">Color</label>
-            <input type="color" id="cmpColor" name="cmpColor" class="form-control">
-        </div>
+            <input type="hidden" id="cmpHidden" name="cmpHidden" value="Not quite hidden value." />
 
-        <div class="form-group">
-            <label for="cmpNumber" class="control-label">Number</label>
-            <input type="number" id="cmpNumber" name="cmpNumber" class="form-control">
-        </div>
+            <div class="form-group btn-group mt-4">
+                  <input type="submit" id="cmpSubmit" name="cmpSubmit" class="btn btn-primary" value="Submit" />
+                  <input type="reset" id="cmpReset" name="cmpReset" class="btn btn-secondary" value="Reset" />
+            </div>
+      </form>
 
-        <div class="form-group">
-            <label for="cmpRange" class="control-label">Range</label>
-            <input type="range" id="cmpRange" name="cmpRange" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="cmpMonth" class="control-label">Month</label>
-            <input type="month" id="cmpMonth" name="cmpMonth" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="cmpWeek" class="control-label">Week</label>
-            <input type="week" id="cmpWeek" name="cmpWeek" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="cmpDate" class="control-label">Date</label>
-            <input type="date" id="cmpDate" name="cmpDate" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="cmpDateTime" class="control-label">Datetime</label>
-            <input type="datetime-local" id="cmpDateTime" name="cmpDateTime" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="cmpTime" class="control-label">Time</label>
-            <input type="time" id="cmpTime" name="cmpTime" class="form-control">
-        </div>
-
-        <div class="form-group">
-            <label for="cmpTextarea" class="control-label">Textarea</label>
-            <textarea id="cmpTextarea" name="cmpTextarea" rows="5" class="form-control" placeholder="Textarea..."></textarea>
-        </div>
-        
-        <div class="form-group">
-            <label for="cmpSelect" class="control-label">Select</label>
-            <select id="cmpSelect" name="cmpSelect" class="form-control">
-                <option value="apple">Apple</option>
-                <option value="pear">Pear</option>
-                <option value="orange">Orange</option>
-                <option value="plum">Plum</option>
-            </select>
-        </div>
-
-        <div class="form-group">
-            <input type="hidden" id="cmpHidden" name="cmpHidden" class="form-control" value="Not quite hidden value.">
-        </div>
-
-        <div class="form-group">
-            <input type="submit" id="cmpSubmit" name="cmpSubmit" class="form-control btn btn-default" value="Submit">
-            <input type="reset" id="cmpReset" name="cmpReset" class="form-control btn btn-default" value="Reset">
-        </div>
-    </form>
-
-    <h1>File upload form</h1>
+      <h1 class="mt-5">File upload form</h1>
 </body>
 </html>
