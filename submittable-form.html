@@ -146,5 +146,19 @@
       </form>
 
       <h1 class="mt-5">File upload form</h1>
+      <form class="form-horizontal" method="post" action="submitted-handler.html">
+        <div class="form-row">
+            <div class="form-group">
+                  <label for="cmpFileUpload">File upload</label>
+                  <input type="file" id="cmpFileUpload" name="cmpFileUpload" class="form-control" value="Upload file" />
+            </div>  
+        </div>
+        <div class="form-row">
+            <div class="form-group btn-group">
+                <input type="submit" id="cmpSubmitFileForm" name="cmpSubmitFileForm" class="btn btn-primary" value="Submit" />
+                <input type="reset" id="cmpResetFileForm" name="cmpSubmitFileForm" class="btn btn-secondary" value="Reset" />
+            </div>  
+        </div>
+      </form>
 </body>
 </html>
